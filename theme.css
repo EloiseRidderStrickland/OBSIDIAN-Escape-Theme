@@ -1,4 +1,42 @@
+/*
+	Author: Eloise Ridder-Strickland
+	Developer View: Ctrl+Shift+I
+*/
+
+.theme-dark {
+  --background-primary: rgba(17, 17, 17, 0.3);
+  --background-secondary: rgba(15, 15, 15, 0.3);
+  	color: rgb(200, 200, 200);						/* -- Document Text Color */
+}
+
+.theme-light {
+  --background-primary: rgb(200, 200, 200);
+  --background-secondary: rgb(190, 190, 190);
+  	color: rgb(50, 50, 50);						/* -- Document Text Color */
+}
+
+/*
+	When defining styles that should remain the same for both light and dark themes, 
+	it is recommended to use the body selector. Only use .theme-dark or .theme-light 
+	selectors if you want the styles to change when switching between light and dark 
+	themes. It's also important to use :root with caution and consideration. If your 
+	variable can be placed within body, .theme-dark, or .theme-light selectors instead, 
+	it is recommended to do so.
+*/
+:root {
+   --input-hover-border-color: tomato;
+}
+
 body {
+	--font-text-theme: 'Inter', sans-serif;
+
+	--h1-color: tomato;			/* -- Heading Colors */
+	--h2-color: tomato;
+	--h3-color: tomato;
+	--h4-color: tomato;
+	--h5-color: tomato;
+	--h6-color: tomato;
+
 	--radius-s: 0px;
 	--radius-m: 0px;
 	--radius-l: 0px;
