@@ -28,7 +28,18 @@
 }
 
 body {
-	--font-text-theme: 'Inter', sans-serif;
+	--font-text-theme: 'Inter', sans-serif;					
+	
+	--divider-width: 1px;									 /* -- Window Divider - Width*/
+	--divider-color: rgb(30, 30, 30);						/* -- Window Divider - Color*/
+
+	--table-header-background-hover: rgb(50, 50, 50);     	/* Table Header - Hover Color*/
+	--table-header-background: rgb(35, 35, 35);           	/* Table Header - Row Color */
+	--table-header-color: rgb(150, 150, 150);             	/* Table Header - Font Color */
+	--table-border-color: rgb(40, 40, 40);                	/* Table - Border Color*/
+	--table-background: rgb(25, 25, 25);                  	/* Table - Base Color */
+  	--table-header-weight: none;                             /* Table Header - Font Weight */
+  	
 
 	--h1-color: tomato;			/* -- Heading Colors */
 	--h2-color: tomato;
