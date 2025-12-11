@@ -3,61 +3,109 @@
 	Developer View: Ctrl+Shift+I
 */
 
+/*
+	Only use .theme-dark or .theme-light selectors if you want the styles to change 
+	when switching between light and dark themes.
+*/
+
 .theme-dark {
-  --background-primary: rgba(17, 17, 17, 0.3);
-  --background-secondary: rgba(15, 15, 15, 0.3);
-  	color: rgb(200, 200, 200);						/* -- Document Text Color */
+	color: var(--l2);							/* -- Document Text Color */
+	--background-primary: var(--d2);
+	--background-secondary: var(--d1);
+	--divider-color: var(--d4);					/* -- Window Divider - Color*/
+  	
+	--table-header-background: var(--d4);       /* Table Header - Row Color */
+	--table-header-color: var(--l5);            /* Table Header - Font Color */
+	--table-border-color: var(--d4);            /* Table - Border Color*/
+	--table-background: var(--d3);              /* Table - Base Color */
 }
 
 .theme-light {
-  --background-primary: rgb(200, 200, 200);
-  --background-secondary: rgb(190, 190, 190);
-  	color: rgb(50, 50, 50);						/* -- Document Text Color */
+	color: var(--d2);							/* -- Document Text Color */
+	--background-primary: var(--l2);
+	--background-secondary: var(--l3);
+	--divider-color: var(--l4);					/* -- Window Divider - Color*/
+  	
+	--table-header-background: var(--l3);      	/* Table Header - Row Color */
+	--table-header-color: var(--l5);            /* Table Header - Font Color */
+	--table-border-color: var(--l4);            /* Table - Border Color*/
+	--table-background: var(--l1);             	/* Table - Base Color */
+}
+
+/*
+	It's important to use :root with caution and consideration. If your variable can 
+	be placed within body, .theme-dark, or .theme-light selectors instead, it is 
+	recommended to do so.
+*/
+:root {
+   --input-hover-border-color: var(--tomato);
+
+/* -- COLOR DECLARATIONS -- */
+	--l1: #e1e1e1;
+  	--l2: #d2d2d2;
+  	--l3: #c8c8c8;
+   	--l4: #bebebe;
+	--l5: #969696;
+	
+	--d1: #0a0a0a;
+	--d2: #0f0f0f;
+	--d3: #191919;
+	--d4: #282828;
+	--d5: #323232;
+
+	--tomato: #ff6347;
+	--orange: #ecaa6b;
+	--yellow: #ffdb78;
+	--green: #7eb186;
+	--blue: #709cea;
+	--violet: #8694e0;
 }
 
 /*
 	When defining styles that should remain the same for both light and dark themes, 
-	it is recommended to use the body selector. Only use .theme-dark or .theme-light 
-	selectors if you want the styles to change when switching between light and dark 
-	themes. It's also important to use :root with caution and consideration. If your 
-	variable can be placed within body, .theme-dark, or .theme-light selectors instead, 
-	it is recommended to do so.
+	it is recommended to use the body selector.
 */
-:root {
-   --input-hover-border-color: tomato;
-}
 
 body {
 	--font-text-theme: 'Inter', sans-serif;					
-	
 	--divider-width: 1px;									 /* -- Window Divider - Width*/
-	--divider-color: rgb(30, 30, 30);						/* -- Window Divider - Color*/
-
-	--table-header-background-hover: rgb(50, 50, 50);     	/* Table Header - Hover Color*/
-	--table-header-background: rgb(35, 35, 35);           	/* Table Header - Row Color */
-	--table-header-color: rgb(150, 150, 150);             	/* Table Header - Font Color */
-	--table-border-color: rgb(40, 40, 40);                	/* Table - Border Color*/
-	--table-background: rgb(25, 25, 25);                  	/* Table - Base Color */
   	--table-header-weight: none;                             /* Table Header - Font Weight */
+	--scrollbar-thumb-bg:rgba(255, 99, 71, 0.1);           /* Idle Color */
+  	--scrollbar-active-thumb-bg: rgba(255, 99, 71, 0.2);   /* Hover Color */
   	
 
-	--h1-color: tomato;			/* -- Heading Colors */
-	--h2-color: tomato;
-	--h3-color: tomato;
-	--h4-color: tomato;
-	--h5-color: tomato;
-	--h6-color: tomato;
-
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+	--h1-color: var(--tomato);			/* -- Heading Colors */
+	--h2-color: var(--orange);
+	--h3-color: var(--yellow);
+	--h4-color: var(--green);
+	--h5-color: var(--blue);
+	--h6-color: var(--violet);
 }
+
+.nav-folder-title
+{
+	font-weight: 600;
+	color: var(--tomato);
+}
+
+.nav-file-title[data-path$=".canvas"] .nav-file-title-content 
+{ color: var(--yellow); }
+
+.nav-file-title[data-path$=".jpg"] .nav-file-title-content,
+.nav-file-title[data-path$=".jpeg"] .nav-file-title-content 
+{ color: var(--green); }
+
+.nav-file-title[data-path$=".png"] .nav-file-title-content 
+{ color: var(--blue); }
+
+.nav-file-title[data-path$=".pdf"] .nav-file-title-content 
+{ color: var(--violet); }
+
+
+
+
+
+
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
 	display: none;
@@ -81,3 +129,10 @@ svg * {
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
+
+
+/*
+	background: linear-gradient(to right, tomato, rgb(255, 200, 120));
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+*/
