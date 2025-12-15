@@ -6,8 +6,8 @@
   Curator: Eloise Ridder-Strickland.
 
 ### Credits
-Glorytype, `glorytypestudio@gmail.com` - [Firegrant Stinklez Font Family](https://www.cdnfonts.com/firegrant-stinklez.font) *(Free for personal use)* <br>
-Khurasan `www.khurasanstudio.com` [Alvifont Font Family](https://www.cdnfonts.com/alvifont.font) *(Free for personal use)*
+Author: **Glorytype** @ `glorytypestudio@gmail.com` - [Firegrant Stinklez Font Family](https://www.cdnfonts.com/firegrant-stinklez.font) *(Free for personal use)* <br>
+Author: **Khurasan** @ `www.khurasanstudio.com` [Alvifont Font Family](https://www.cdnfonts.com/alvifont.font) *(Free for personal use)*
 
 ##### Unauthored
 [Magic Halloween Font Family](https://www.cdnfonts.com/magic-halloween.font) *(Free for personal use)* <br>
